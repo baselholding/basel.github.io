@@ -176,6 +176,1260 @@
       text-align: justify;
     }
 
+    /*sidebar css */
+    
+	.ap-o-burger-menu {
+	    display: none;
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100vw;
+	    height: 100vh;
+	    padding: 110px 20px 80px;
+	    z-index: 16;
+	    background-color: #fff;
+	}
+    .grid-center {
+        display: grid;
+        -webkit-box-align: center;
+        align-items: center;
+        justify-items: center;
+      }
+  	.list-reset {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	}
+    .sidebar {
+        background-color: #15202b;
+        font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI,
+          Roboto, sans-serif;
+        display: grid;
+        grid-template-rows: 140px auto 1fr auto;
+      }
+
+      .sidebar-close {
+        position: absolute;
+        right: 4px;
+        top: 8px;
+        width: 48px;
+        height: 48px;
+        opacity: 1;
+        border-radius: 50%;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .sidebar-close:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .sidebar-close:after,
+      .sidebar-close:before {
+        position: absolute;
+        right: 24px;
+        top: 12px;
+        content: " ";
+        height: 24px;
+        width: 2px;
+        background-color: #fff;
+      }
+
+      .sidebar-close:after {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      .sidebar-close:before {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+
+      .sidebar-header {
+        position: relative;
+        background-color: hsla(0, 0%, 100%, 0.448);
+        border-bottom: 1px solid #fff;
+        box-shadow: -2px 0 3px 0 #000;
+        overflow: hidden;
+      }
+
+      .sidebar-header-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        -webkit-filter: blur(80px) hue-rotate(-20deg) saturate(3);
+        filter: blur(80px) hue-rotate(-20deg) saturate(3);
+      }
+
+      .sidebar-header-avatar {
+        /*border-radius: 50%;*/
+        width: 64px;
+        height: 64px;
+        /*border: 1px solid #fff;
+        box-shadow: -2px 2px 6px 0 rgba(0, 0, 0, 0.3),
+          -20px 20px 20px -5px rgba(0, 0, 0, 0.2);*/
+      }
+
+      .sidebar-header-text {
+        color: #fff;
+        font-size: 12px;
+        margin-top: 6px;
+        letter-spacing: 2px;
+        z-index: 10;
+      }
+
+      .sidebar-nav {
+        -webkit-box-align: center;
+        align-items: center;
+        display: grid;
+      }
+
+      .sidebar-nav-list {
+        align-self: center;
+      }
+
+      .sidebar-nav-link {
+        color: #fff;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-content: center;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: none;
+        line-height: 1.2;
+        text-decoration: none;
+        padding: 12px 0;
+        margin-left: 0;
+        cursor: pointer;
+      }
+
+      .sidebar-nav-link:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 10px;
+        -webkit-transform: scaleX(0) translateZ(0);
+        transform: scaleX(0) translateZ(0);
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transition: -webkit-transform 0.24s ease-in-out;
+        transition: -webkit-transform 0.24s ease-in-out;
+        transition: transform 0.24s ease-in-out;
+        transition: transform 0.24s ease-in-out,
+          -webkit-transform 0.24s ease-in-out;
+        background-color: #000;
+        border-radius: 0 25px 25px 0;
+      }
+
+      .sidebar-nav-link:hover:after {
+        display: block;
+
+        content: "";
+        -webkit-transform: scaleX(1) translateZ(0);
+        transform: scaleX(1) translateZ(0);
+      }
+
+      .sidebar-nav-link-text {
+        margin-left: 2rem;
+        align-self: center;
+        z-index: 1;
+      }
+
+      .sidebar-nav-link-icon {
+        width: 1em;
+        height: 1em;
+        margin-left: 0.6rem;
+        margin-right: 1.6rem;
+        color: #fff;
+        align-self: center;
+        z-index: 1;
+      }
+
+      .sidebar-nav-link-icon svg * {
+        stroke-width: 12px;
+      }
+
+      .sidebar-nav-link-icon:hover {
+        margin-right: 10rem;
+      }
+
+      .sidebar-social {
+        display: grid;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .cta-url {
+        color: #fff;
+        text-align: center;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-content: center;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: none;
+        line-height: 1.2;
+        text-decoration: none;
+        padding: 12px 0;
+        border-radius: 12px;
+        margin: 20px 10px;
+        letter-spacing: 1px;
+        background-color: #14bcbf;
+      }
+
+      .sidebar-footer {
+        align-self: end;
+      }
+
+      .sidebar-footer-list {
+        display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-bottom: 10px;
+      }
+      .sidebar-footer-list a {
+    margin-right: 10px;
+}
+.sidebar-footer-list svg {
+    height: 32px;
+}
+
+      .sidebar-footer-link {
+        color: #fff;
+        align-content: center;
+        justify-self: center;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 14px 0;
+        white-space: nowrap;
+        margin-left: 0;
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+
+      .sidebar-footer-link:hover {
+        background-color: #000;
+      }
+
+      .sidebar-footer-reg {
+        border-top: 1px solid #43678a;
+        padding: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        color: #fff;
+      }
+
+
+    @media screen
+    and (max-width: 412px), only screen and (max-device-width: 412px) {
+      :root {
+        --color-error: #B00020;
+        --color-primary: #005AF0;
+      }
+
+      amp-story {
+        color: white;
+        border: none;
+      }
+      .title {
+
+        padding: 0 0 0 0;
+      }
+      .title2 {
+
+        padding: 0 0 32% 0;
+      }
+      .bottom  {
+        align-content: end;
+        padding: 12% 0 0 0;
+      }
+
+      .start {
+        align-content: start;
+        text-align: left;
+      }
+      .end {
+        align-content: end;
+        text-align: right;
+      }
+      
+      .image-fit-cover img
+      {
+        object-position: center right;
+      }
+      .banner_text
+      {
+        /*text-align: center;
+      	padding-top: 5vh;
+      	margin-left: 0;*/
+      	top: 0;
+      }
+      .center {
+        align-content: center;
+        text-align: center;
+      }
+      .fill {
+        text-align: justify;
+      }
+      .absolute {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+      }
+
+    }
+
+    /*iphone 6and 7*/
+    @media screen
+    and (max-width: 414px), only screen and (max-device-width: 736px) 
+    {
+		.image-fit-cover img
+      	{
+        	object-position: center right;
+      	}
+    	.banner_text
+    	{
+		    padding-top: 7vh;
+		    margin: 0;
+    	}
+    }
+
+
+
+    @media screen
+    and (max-width: 320px), only screen and (max-device-width: 320px) {
+      :root {
+        --color-error: #B00020;
+        --color-primary: #005AF0;
+      }
+
+      amp-story {
+        color: white;
+        border: none;
+      }
+      .title {
+
+        padding: 0 0 0 0;
+      }
+      .title2 {
+
+        padding: 0 0 20% 0;
+      }
+      .bottom  {
+        align-content: end;
+        padding: 12% 0 0 0;
+      }
+
+      .start {
+        align-content: start;
+        text-align: left;
+      }
+     
+      .image-fit-cover img
+      {
+        object-position: center right;
+      }
+
+      .end {
+        align-content: end;
+        text-align: right;
+      }
+      .center {
+        align-content: center;
+        text-align: center;
+      }
+      .fill {
+        text-align: justify;
+      }
+      .absolute {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+      }
+      .banner_text
+      {
+       /* margin-left: 0;*/
+      text-align: center;
+      padding-top: 5vh;
+      margin-left: 0;
+      }
+      .-op
+      {
+          font-size: 18px;
+          transform: translate(0px,-122px);
+      }
+      .center-top {
+        align-content: top;
+        text-align: top;
+        margin-top: 5px;
+        margin-bottom: 25px;
+
+    }
+    @media screen
+    and (max-width: 823px)
+    and (min-width: 360px){
+      :root {
+        --color-error: #B00020;
+        --color-primary: #005AF0;
+      }
+      amp-story {
+        color: white;
+        border: none;
+      }
+      .title {
+
+        padding: 0 0 0 0;
+      }
+      .title2 {
+
+        padding: 0 0 30% 0;
+      }
+      .bottom  {
+        align-content: end;
+        padding: 12% 0 0 0;
+      }
+      div {
+
+      }
+      .start {
+        align-content: start;
+        text-align: left;
+      }
+    
+      .image-fit-cover img
+      {
+        object-position: center right;
+      }
+
+      .end {
+        align-content: end;
+        text-align: right;
+      }
+      .center {
+        align-content: center;
+        text-align: center;
+      }
+      .fill {
+        text-align: justify;
+      }
+      .banner_text
+      {
+        /*text-align: center;*/
+      	padding-top:0;
+      	margin-left: 0;
+      	top: 0;
+      }
+      .absolute {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+      }
+
+    }
+
+    @media screen
+    and (max-width: 1024px), only screen and (max-device-width: 1024px) {
+      :root {
+        --color-error: #B00020;
+        --color-primary: #005AF0;
+      }
+  
+    }
+
+
+    @media screen
+    and (max-width: 1024px)
+    and (min-width: 768px){
+      :root {
+        --color-error: #B00020;
+        --color-primary: #005AF0;
+      }
+      amp-story {
+        color: white;
+        border: none;
+      }
+      amp-story-grid-layer {
+        text-align: center;
+        padding: 5% 0 0 0;
+
+      }
+      .bottom  {
+        align-content: center;
+        padding: 12% 0 0 0;
+      }
+
+      div {
+        text-align: center;
+
+      }
+      .start {
+        align-content: start;
+        text-align: left;
+      }
+
+      .banner_text
+      {
+        margin-left: 10vh;
+        padding-right: 0;
+      }
+      .banner_click
+      {
+        align-content: end;
+        
+        padding-left: 0;
+      }
+      .end {
+        align-content: end;
+        text-align: right;
+      }
+      .center {
+        align-content: center;
+        text-align: center;
+      }
+      .fill {
+        text-align: justify;
+      }
+      .hide {
+        opacity: 0;
+      }
+      .top {
+        padding: 20% 5% 0 5%;
+      }
+      .title {
+
+        padding: 0 0 0 0;
+
+      }
+      .title2 {
+
+        padding: 5% 8% 45% 8%;
+      }
+      .cover-text
+      {
+        margin: 50% 0 0 0;
+        padding: 0 3% 0 3%;
+      }
+      .title-text
+      {
+        margin: 25% 0 0 0;
+        padding: 0 3% 0 3%;
+      }
+      .padding{
+        padding-left: 100px;
+        padding-top: 160px;
+      }
+    }
+    @media screen
+    and (max-width: 2400px)
+    and (min-width: 1025px){
+      :root {
+        --color-error: #B00020;
+        --color-primary: #005AF0;
+      }
+      amp-story {
+        color: white;
+        border: none;
+      }
+      .title2 {
+
+        padding: 0 0 10% 0 ;
+      }
+
+      amp-story-grid-layer {
+        text-align: center;
+        padding: 5% 0 0 0;
+
+      }
+      .bottom  {
+        align-content: center;
+        padding: 12% 0 0 0;
+      }
+
+      div {
+        text-align: center;
+
+      }
+      .start {
+        align-content: start;
+        text-align: left;
+      }
+      .banner_text
+      {
+        margin-left: 10vh;
+      }
+
+      
+
+      .end {
+        align-content: end;
+        text-align: right;
+      }
+      .center {
+        align-content: center;
+        text-align: center;
+      }
+      .fill {
+        text-align: justify;
+      }
+      .hide {
+        opacity: 0;
+      }
+      .top {
+        padding: 10% 0 0 0;
+      }
+
+      .cover-text
+      {
+        margin: 300px 0 0 0;
+      }
+      .title-text
+      {
+        margin: 100px 0 0 0;
+      }
+      .padding{
+        padding-left: 100px;
+        padding-top: 160px;
+      }
+      .padding1{
+        padding-left: 100px;
+      }
+
+    }
+
+  </style>
+  <script async src="https://cdn.ampproject.org/v0/amp-video-0.1.js" custom-element="amp-video">
+  </script>
+
+  <script async src="https://cdn.ampproject.org/v0/amp-story-1.0.js" custom-element="amp-story">
+  </script>
+  <script async src="https://cdn.ampproject.org/v0/amp-font-0.1.js" custom-element="amp-font">
+  </script>
+  <script async src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js" custom-element="amp-analytics">
+  </script>
+  <script async src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js" custom-element="amp-iframe">
+  </script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-nested-menu" src="https://cdn.ampproject.org/v0/amp-nested-menu-0.1.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <meta content="width=device-width,minimum-scale=1,initial-scale=1" name="viewport">
+  <meta charset="utf-8">
+  <link href="index.html" rel="canonical">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+<body>
+<amp-story standalone supports-landscape title="Basel" publisher="" publisher-logo-src="./assets/2.png" poster-portrait-src="https://firebasestorage.googleapis.com/v0/b/ampstor.appspot.com/o/ampstor-grey-background?alt=media&token=d4bbdc24-8f27-4404-9b8a-b54d804212de">
+
+<!-- Amp sidebar  -->
+      <amp-sidebar id="sidebar" layout="nodisplay" class="sidebar">
+        <div class="sidebar-header grid-center">
+          <amp-img
+            src="./assets/basel_logo.png"
+            layout="responsive"
+            alt="alt"
+            width="1"
+            height="1"
+            class="sidebar-header-bg"
+          ></amp-img>
+          <a on="tap:sidebar.close" class="sidebar-close"></a>
+          <div class="grid-center">
+            <amp-img
+              alt="Basel Holding"
+              src="./assets/basel_logo.png"
+              width="1"
+              height="1"
+              layout="responsive"
+              class="sidebar-header-avatar"
+            ></amp-img>
+            <div class="sidebar-header-text">Basel Holding</div>
+          </div>
+        </div>
+        <nav class="sidebar-nav">
+          <ul class="sidebar-nav-list list-reset">
+             <li class="sidebar-nav-item">
+              <a
+                aria-label="Register"
+                href="https://www.bhdutyfree.com/"
+                class="sidebar-nav-link"
+              >
+                <div class="sidebar-nav-link-text">Home</div>
+                <div class="sidebar-nav-link-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <polyline
+                      fill="none"
+                      stroke="white"
+                      points="27 5 72.167 50.167 27.335 95"
+                    ></polyline>
+                  </svg>
+                </div>
+              </a>
+            </li>
+
+
+            <li class="sidebar-nav-item">
+              <a
+                aria-label="Contato"
+                href="https://www.bhdutyfree.com/about-us"
+                class="sidebar-nav-link"
+              >
+                <div class="sidebar-nav-link-text">About Us
+                </div>
+                	
+	                	<div class="sidebar-nav-link-icon">
+		                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" >
+		                    <polyline
+		                      fill="none"
+		                      stroke="currentColor"
+		                      points="27 5 72.167 50.167 27.335 95"
+		                    ></polyline>
+		                  </svg>
+		                </div>
+		                
+
+              	</a>
+            </li>
+
+
+			<li class="sidebar-nav-item">
+              <a
+                aria-label="Contato"
+                href="https://www.bhdutyfree.com/brands-departments-1"
+                class="sidebar-nav-link"
+             ><div class="sidebar-nav-link-text">Brands & Departments</div>
+                <div class="sidebar-nav-link-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <polyline
+                      fill="none"
+                      stroke="currentColor"
+                      points="27 5 72.167 50.167 27.335 95"
+                    ></polyline>
+                  </svg>
+                </div>
+              </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+              <a
+                aria-label="Contato"
+                href="https://www.bhdutyfree.com/trips-tips"
+                class="sidebar-nav-link"
+             ><div class="sidebar-nav-link-text">Trips & Tips</div>
+                <div class="sidebar-nav-link-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <polyline
+                      fill="none"
+                      stroke="currentColor"
+                      points="27 5 72.167 50.167 27.335 95"
+                    ></polyline>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="sidebar-nav-item">
+              <a
+                aria-label="Contato"
+                href="https://www.bhdutyfree.com/our-locations"
+                class="sidebar-nav-link"
+             ><div class="sidebar-nav-link-text">Our Locations</div>
+                <div class="sidebar-nav-link-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <polyline
+                      fill="none"
+                      stroke="currentColor"
+                      points="27 5 72.167 50.167 27.335 95"
+                    ></polyline>
+                  </svg>
+                </div>
+              </a>
+            </li>
+
+		
+
+          </ul>
+        </nav>
+        <footer class="sidebar-footer">
+          <div class="sidebar-footer-list">
+            <a target="_blank" href="insta"
+              ><svg
+                enable-background="new 0 0 24 24"
+                height="40"
+                viewBox="0 0 24 24"
+                width="40"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <linearGradient
+                  id="SVGID_1_4"
+                  gradientTransform="matrix(0 -1.982 -1.844 0 -132.522 -51.077)"
+                  gradientUnits="userSpaceOnUse"
+                  x1="-37.106"
+                  x2="-26.555"
+                  y1="-72.705"
+                  y2="-84.047"
+                >
+                  <stop offset="0" stop-color="#fd5" />
+                  <stop offset=".5" stop-color="#ff543e" />
+                  <stop offset="1" stop-color="#c837ab" />
+                </linearGradient>
+                <path
+                  d="m1.5 1.633c-1.886 1.959-1.5 4.04-1.5 10.362 0 5.25-.916 10.513 3.878 11.752 1.497.385 14.761.385 16.256-.002 1.996-.515 3.62-2.134 3.842-4.957.031-.394.031-13.185-.001-13.587-.236-3.007-2.087-4.74-4.526-5.091-.559-.081-.671-.105-3.539-.11-10.173.005-12.403-.448-14.41 1.633z"
+                  fill="url(#SVGID_1_4)"
+                />
+                <path
+                  d="m11.998 3.139c-3.631 0-7.079-.323-8.396 3.057-.544 1.396-.465 3.209-.465 5.805 0 2.278-.073 4.419.465 5.804 1.314 3.382 4.79 3.058 8.394 3.058 3.477 0 7.062.362 8.395-3.058.545-1.41.465-3.196.465-5.804 0-3.462.191-5.697-1.488-7.375-1.7-1.7-3.999-1.487-7.374-1.487zm-.794 1.597c7.574-.012 8.538-.854 8.006 10.843-.189 4.137-3.339 3.683-7.211 3.683-7.06 0-7.263-.202-7.263-7.265 0-7.145.56-7.257 6.468-7.263zm5.524 1.471c-.587 0-1.063.476-1.063 1.063s.476 1.063 1.063 1.063 1.063-.476 1.063-1.063-.476-1.063-1.063-1.063zm-4.73 1.243c-2.513 0-4.55 2.038-4.55 4.551s2.037 4.55 4.55 4.55 4.549-2.037 4.549-4.55-2.036-4.551-4.549-4.551zm0 1.597c3.905 0 3.91 5.908 0 5.908-3.904 0-3.91-5.908 0-5.908z"
+                  fill="#fff"
+                /></svg>
+              </a>
+            <a target="_blank" href="twitter"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="40" width="40"
+              viewBox="0 0 112.197 112.197" style="enable-background:new 0 0 112.197 112.197;" xml:space="preserve">
+           <g>
+             <circle style="fill:#55ACEE;" cx="56.099" cy="56.098" r="56.098"/>
+             <g>
+               <path style="fill:#F1F2F2;" d="M90.461,40.316c-2.404,1.066-4.99,1.787-7.702,2.109c2.769-1.659,4.894-4.284,5.897-7.417
+                 c-2.591,1.537-5.462,2.652-8.515,3.253c-2.446-2.605-5.931-4.233-9.79-4.233c-7.404,0-13.409,6.005-13.409,13.409
+                 c0,1.051,0.119,2.074,0.349,3.056c-11.144-0.559-21.025-5.897-27.639-14.012c-1.154,1.98-1.816,4.285-1.816,6.742
+                 c0,4.651,2.369,8.757,5.965,11.161c-2.197-0.069-4.266-0.672-6.073-1.679c-0.001,0.057-0.001,0.114-0.001,0.17
+                 c0,6.497,4.624,11.916,10.757,13.147c-1.124,0.308-2.311,0.471-3.532,0.471c-0.866,0-1.705-0.083-2.523-0.239
+                 c1.706,5.326,6.657,9.203,12.526,9.312c-4.59,3.597-10.371,5.74-16.655,5.74c-1.08,0-2.15-0.063-3.197-0.188
+                 c5.931,3.806,12.981,6.025,20.553,6.025c24.664,0,38.152-20.432,38.152-38.153c0-0.581-0.013-1.16-0.039-1.734
+                 C86.391,45.366,88.664,43.005,90.461,40.316L90.461,40.316z"/>
+             </g>
+           </svg></a>
+            <a target="_blank" href="fb"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="40" width="40"
+              viewBox="0 0 408.788 408.788" style="enable-background:new 0 0 408.788 408.788;" xml:space="preserve">
+           <path style="fill:#475993;" d="M353.701,0H55.087C24.665,0,0.002,24.662,0.002,55.085v298.616c0,30.423,24.662,55.085,55.085,55.085
+             h147.275l0.251-146.078h-37.951c-4.932,0-8.935-3.988-8.954-8.92l-0.182-47.087c-0.019-4.959,3.996-8.989,8.955-8.989h37.882
+             v-45.498c0-52.8,32.247-81.55,79.348-81.55h38.65c4.945,0,8.955,4.009,8.955,8.955v39.704c0,4.944-4.007,8.952-8.95,8.955
+             l-23.719,0.011c-25.615,0-30.575,12.172-30.575,30.035v39.389h56.285c5.363,0,9.524,4.683,8.892,10.009l-5.581,47.087
+             c-0.534,4.506-4.355,7.901-8.892,7.901h-50.453l-0.251,146.078h87.631c30.422,0,55.084-24.662,55.084-55.084V55.085
+             C408.786,24.662,384.124,0,353.701,0z"/>
+           
+           </svg>
+           </a>
+            <a target="_blank" href="  linkedin "><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="40" width="40"
+              viewBox="0 0 382 382" style="enable-background:new 0 0 382 382;" xml:space="preserve">
+           <path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+             C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+             H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+             c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+             s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+             c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+             c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+             c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+             L341.91,330.654L341.91,330.654z"/>
+           
+           </svg></a>
+          </div>
+          
+        </footer>
+      </amp-sidebar>
+
+   
+
+  <amp-story-page id="0">
+    <amp-story-grid-layer  template="fill">
+      <amp-img height="1024" src="./assets/vel.png" class="image-fit-cover" style="color: #FFFFFF; " width="1024">
+      </amp-img>
+    </amp-story-grid-layer>
+   <amp-story-grid-layer class="center-top" template="vertical">
+      <div>
+        <amp-img height="50" src="./assets/basel_logo.png" class="image-fit-contain" style="color: #FFFFFF; ">
+        </amp-img>
+      </div>
+      <div>
+      <p style="color: black;opacity: 1;font-family: Poppins;font-size: 1.3em;text-align: center;font-weight: bold;;" animate-in="fly-in-top" animate-in-duration="1s">New-age Travel Retailer <span style="white-space: nowrap;"></span>
+      </p>
+      </div>
+      <div>
+      <p style="color: black;opacity: 1;font-family: Poppins;font-size: 1em;text-align:center; font-weight: bold;" animate-in="fly-in-left" animate-in-duration="1s">
+        Crafting value and providing highest level of service for our brands partners and customers
+      </p>
+      </div>
+    </amp-story-grid-layer>
+  </amp-story-page>
+
+
+
+  <amp-story-page id="1">
+    <amp-story-grid-layer template="fill">
+      <amp-img height="1024" src="./assets/purchase.png" class="image-fit-cover" style="color: #FFFFFF;object-fit: cover;" width="1024">
+      </amp-img>
+    </amp-story-grid-layer>
+
+    <amp-story-grid-layer  template="vertical">
+      <div>
+        <p style="color: black;opacity: 1;font-family: Poppins;font-size: 1.3em; text-align: center; font-weight: bold;" animate-in="fly-in-top" animate-in-duration="1s">
+          Purchase point
+      </div>
+      <div>
+        <p style="color: black;opacity: 1;font-family: Poppins;font-size: 1em; text-align: center; font-weight: bold;" animate-in="fly-in-left" animate-in-duration="1s">
+          Touchpoint to over 40million chinese passengers anually.
+      </div>
+      
+    </amp-story-grid-layer>
+  </amp-story-page>
+
+
+
+  <amp-story-page id="2">
+    <amp-story-grid-layer template="fill">
+      <amp-img height="1024" src="./assets/experienceO.png" class="image-fit-cover" style="color: #FFFFFF;object-fit: cover;" width="1024" >
+      </amp-img>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer template="vertical" >
+      <div >
+        <p style="color:black;opacity: 1;font-family: Poppins;font-size: 1.3em;text-align: center;font-weight: bold; ;" animate-in="fly-in-top" animate-in-duration="1s">
+          Experience-oriented     
+        </p>
+      </div>
+      <div >
+        <p style="color: black;opacity: 1;font-family: Poppins;font-size: 1.0em;text-align: center ;font-weight: bold ;margin-top: 1em" animate-in="fade-in" animate-in-delay="0s" animate-in-duration="1s" >
+          Prioritise digital adoption to elevate digital adoption.
+        </p>
+      </div>
+    </amp-story-grid-layer>
+  </amp-story-page>
+
+  <amp-story-page id="3">
+    <amp-story-grid-layer template="fill">
+      <amp-img height="1024" src="./assets/perfume.png" class="image-fit-cover" style="color: #FFFFFF;object-fit: cover;" width="1024">
+      </amp-img>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer template="vertical">
+       <div class="title">
+        <p style="color: black;font-family: Poppins;font-size: 1.3em;text-align: center; font-weight: bold;" animate-in="fly-in-top" animate-in-duration="1s">
+         Perfume & Cosmetics
+        </p>
+      </div>
+      <div>
+         <amp-img height="300" src="./assets/perfume(logo).png" class="image-fit-contain" style="height:1000;">
+      </amp-img>
+      </div>
+       <div style="margin-top:0em; text-align: center;">
+
+        <a href="https://www.bhdutyfree.com/copy-of-perfume-cosmetics " class="button" style="text-decoration:none; background-color:#FF6B60; color:white; padding: 5px 10px 5px 10px; font-family: Poppins;font-size: 1em;"animate-in="fade-in" animate-in-duration="0.5s" animate-in-delay="0.5">View</a>
+
+      </div>
+     </amp-story-grid-layer>
+  </amp-story-page>
+
+
+
+
+  <amp-story-page id="5">
+    <amp-story-grid-layer template="fill">
+      <amp-img height="1024" src="./assets/wine.png" class="image-fit-cover" style="color: #FFFFFF;object-fit: cover;" width="1024">
+      </amp-img>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer template="vertical">
+       <div class="title">
+        <p style="color: #FFFFFF;font-family: Poppins;font-size: 1.3em;text-align: center; font-weight: bold;;" animate-in="fly-in-top" animate-in-duration="1s">
+         Wine & Spirits
+        </p>
+      </div>
+      <div>
+         <amp-img height="200" src="./assets/wine(logo).png" class="image-fit-contain" style="height:1000;">
+      </amp-img>
+      </div>
+       <div style="margin-top:0em; text-align: center;">
+
+        <a href= "https://www.bhdutyfree.com/wine-spirits" class="button" style="text-decoration:none; background-color:#FF6B60; color:white; padding: 5px 10px 5px 10px; font-family: Poppins;font-size: 1em;"animate-in="fade-in" animate-in-duration="0.5s" animate-in-delay="0.5">View</a>
+
+      </div>
+     </amp-story-grid-layer>
+  </amp-story-page>
+
+
+  <amp-story-page id="6">
+    <amp-story-grid-layer template="fill">
+      <amp-img height="1024" src="./assets/toba.png" class="image-fit-cover" style="color: #FFFFFF;object-fit: cover;" width="1024">
+      </amp-img>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer template="vertical">
+      <div class="title">
+        <p style="color: black;font-family: Poppins;font-size: 1.3em;text-align: center; font-weight: bold; ;" animate-in="fly-in-top" animate-in-duration="1s">
+          <br>
+          Tobacco
+        </p>
+      </div>
+      <div>
+         <amp-img height="200" src="./assets/tobacco(logo).png" class="image-fit-contain" style="height:1000;">
+      </amp-img>
+      </div>
+      <div style="margin-top:0em; text-align: center;">
+
+        <a href="https://www.bhdutyfree.com/tobacco" class="button" style="text-decoration:none; background-color:#FF6B60; color:white; padding: 5px 10px 5px 10px; font-family: Poppins;font-size: 1em;"animate-in="fade-in" animate-in-duration="0.5s" animate-in-delay="0.5">View</a>
+
+      </div>
+    </amp-story-grid-layer>
+  </amp-story-page>
+
+<amp-story-page id="7">
+    <amp-story-grid-layer template="fill">
+      <amp-img height="1024" src="./assets/choco.png" class="image-fit-cover" style="color: #FFFFFF;object-fit: cover;" width="1024">
+      </amp-img>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer template="vertical">
+       <div class="title">
+        <p style="color: #FFFFFF;font-family: Poppins;font-size: 1.3em;text-align: center; font-weight: bold;;" animate-in="fly-in-top" animate-in-duration="1s">
+          Chocolates
+        </p>
+      </div>
+      <div>
+         <amp-img height="200" src="./assets/chocolate(logo).png" class="image-fit-contain" style="height:1000;">
+      </amp-img>
+      </div>
+       <div style="margin-top:0em; text-align: center;">
+
+        <a href="https://www.bhdutyfree.com/chocolates" class="button" style="text-decoration:none; background-color:#FF6B60; color:white; padding: 5px 10px 5px 10px; font-family: Poppins;font-size: 1em;"animate-in="fade-in" animate-in-duration="0.5s" animate-in-delay="0.5">View</a>
+
+      </div>
+     </amp-story-grid-layer>
+  </amp-story-page>
+
+  <amp-story-page id="8">
+    <amp-story-grid-layer template="fill">
+      <amp-img height="804" src="./assets/experience.png" class="image-fit-cover" style="color: #FFFFFF;object-fit:cover;" width="804">
+      </amp-img>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer  template="vertical">
+      <div class="title">
+        <p style="color: white;font-family: Poppins;font-size: 1.3em;text-align: center; font-weight: bold;;" animate-in="fly-in-top" animate-in-duration="1s">
+          International Presence
+        </p>
+      </div>
+        <div>
+          <p style="color: white;opacity: 1; font-family: Poppins;font-size: 1em;text-align: center;font-weight: 60px; margin-top: 1em "
+          animate-in="fly-in-top" animate-in-duration="1s">
+        Present in 10 countries across 24 outlets serving emerging markets globally
+        </p>
+      </div>
+      </amp-story-grid-layer>
+  </amp-story-page>
+
+
+  <amp-story-page id="9">
+    <amp-story-grid-layer  template="fill">
+      <amp-img height="1024" src="./assets/travel.png" class="image-fit-cover" style="color: #FFFFFF; object-fit:cover;" width="1024" >
+      </amp-img>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer class="banner_text" template="vertical">
+      <div>
+        <p style="color: black;font-family: Poppins;font-size: 1.3em;text-align: left;font-weight: bold;" animate-in="fly-in-top" animate-in-duration="1s">
+          Trips and Tips
+        </p>
+      </div>
+      <div>
+        <p style="color: black;opacity:1;font-family: Poppins;font-size: 1em;font-weight:bold;text-align: left; " animate-in="fly-in-top" animate-in-duration="1s">
+          Sign up for our newsletters to recieve interesting content!
+        </p>
+      </div>
+      <div style="margin-top:0em; text-align: left;">
+
+        <a href="https://www.bhdutyfree.com/trips-tips" class="button" style="text-decoration:none; background-color:#FF6B60; color:white; padding: 5px 10px 5px 10px; font-family: Poppins;font-size: 1em;"animate-in="fade-in" animate-in-duration="0.5s" animate-in-delay="0.5">View</a>
+
+      </div>
+      
+      
+      </amp-story-grid-layer>
+  </amp-story-page>
+
+  
+
+</amp-story>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en" ⚡>
+<head>
+  <title>
+    Basel
+  </title>
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+  </style>
+ 
+  <noscript>
+    <style amp-boilerplate>
+      body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+    </style>
+  </noscript>
+  <style amp-custom>
+    :root {
+      --color-error: #B00020;
+      --color-primary: #005AF0;
+    }
+    amp-story {
+      color: white;
+      border: none;
+    }
+    @keyframes roll {
+      0% {
+        opacity: 0;
+        transform: translate3d(0,-70%,0);
+      }
+      2.5%, 25% {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+      }
+      100%, 27.5% {
+        opacity: 0;
+        transform: translate3d(0,70%,0);
+      }
+    }
+    .-ou {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+
+    }
+    .-op {
+      /*margin-top: 1.5rem;*/
+      font-family: Poppins,sans-serif;
+      font-weight: 700;
+      line-height: 1.4em;
+      font-size: 1.65rem;
+      color: #176692;
+      
+      /*margin-left: 10vh;*/
+      /*margin: 0;*/
+    }
+    .-oa {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      margin-right: auto;
+      color: #f0696e;
+      animation: roll 8s cubic-bezier(.25,.1,.25,1) 1s infinite backwards;
+    }
+    .-oa:nth-child(2)
+    {
+      animation-delay: 3s;
+      opacity: 0;
+    }
+    .-oa:nth-child(3)
+    {
+      animation-delay: 5s;
+      opacity: 0;
+    }
+    .-oa:nth-child(4)
+    {
+      animation-delay: 7s;
+      opacity: 0;
+    }
+
+    .image-fit-contain img {
+      object-fit: contain;
+    }
+
+    .image-fit-cover img {
+      object-fit: cover;
+    }
+
+    .image-fit-fill img {
+      object-fit: fill;
+    }
+
+    amp-story-grid-layer {
+    }
+    .bottom  {
+      align-content: end;
+      padding: 42% 0 0 0;
+    }
+    div {
+    }
+    .start {
+      align-content: start;
+      text-align: left;
+    }
+    
+    .banner_text
+    {
+      text-align: left;
+     /* padding-right: 120vh;*/
+      padding-top: 46vh;
+      margin-left: 15vh;
+    }
+    .end {
+      align-content: end;
+      text-align: right;
+    }
+    .center {
+      align-content: center;
+      text-align: center;
+    }
+    .fill {
+      text-align: justify;
+    }
+
     @media screen
     and (max-width: 412px), only screen and (max-device-width: 412px) {
       :root {
